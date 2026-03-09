@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Steam Key Auto Redeemer",
+  "version": "1.0.0",
+  "description": "Coche automatiquement le SSA Steam et clique sur Continuer sur la page d'enregistrement de clé.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://store.steampowered.com/account/registerkey*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "page-script.js"
+      ],
+      "matches": [
+        "https://store.steampowered.com/*"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://store.steampowered.com/*"
+  ]
+}
