@@ -3,6 +3,12 @@
   "name": "Steam Key Auto Redeemer",
   "version": "1.0.0",
   "description": "Coche automatiquement le SSA Steam et clique sur Continuer sur la page d'enregistrement de clé.",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": [
